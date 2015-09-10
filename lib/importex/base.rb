@@ -49,7 +49,7 @@ module Importex
               if row.at(index).nil?
                 value = ""
               elsif row.at(index).class.to_s == "Spreadsheet::Formula"
-                value = row.at(index).value
+                value = row.at(index).value.to_s
               else
                 value = row.at(index).to_s
               end
